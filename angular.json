@@ -5,33 +5,10 @@
   "projects": {
     "gradus": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss",
-          "skipTests": true
-        },
-        "@schematics/angular:class": {
-          "skipTests": true
-        },
-        "@schematics/angular:directive": {
-          "skipTests": true
-        },
-        "@schematics/angular:guard": {
-          "skipTests": true
-        },
-        "@schematics/angular:module": {
-          "skipTests": true
-        },
-        "@schematics/angular:pipe": {
-          "skipTests": true
-        },
-        "@schematics/angular:service": {
-          "skipTests": true
-        }
-      },
+      "schematics": { },
       "root": "",
-      "sourceRoot": "src", 
-      "prefix": "app", 
+      "sourceRoot": "src",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -45,12 +22,12 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [ 
+            "styles": [
               "src/styles.scss"
             ],
             "scripts": [],
-            "allowedCommonJsDependencies": [ 
-              "leaflet-map", 
+            "allowedCommonJsDependencies": [
+              "leaflet-map",
               "dragula",
               "clone-deep"
             ],
@@ -141,5 +118,8 @@
         }
       }
     }
-  }  
+  },
+  "cli": {
+    "analytics": "70c640ab-f0dd-4c58-8eed-949c0f9b184e"
+  }
 }

@@ -61,5 +61,18 @@
     "protractor": "7.0.0",
     "ts-node": "10.8.1",
     "typescript": "4.7.4"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedhadri/angular-gradus-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohamedhadri/angular-gradus-1/issues"
+  },
+  "homepage": "https://github.com/mohamedhadri/angular-gradus-1#readme"
 }

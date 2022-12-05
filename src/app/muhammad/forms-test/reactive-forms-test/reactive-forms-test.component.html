@@ -1,0 +1,9 @@
+<form [formGroup]="form">
+  <mat-form-field appearance="legacy" floatLabel="always">
+    <mat-label>name</mat-label>
+    <input matInput formControlName="name">
+    <mat-icon matPrefix>edit</mat-icon>
+  </mat-form-field>
+  <input formControlName="body">
+</form>
+<button (click)="save()">save</button>
