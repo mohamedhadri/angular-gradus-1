@@ -39,6 +39,7 @@ import { ApplicationsComponent } from './theme/components/applications/applicati
 import { MessagesComponent } from './theme/components/messages/messages.component';
 import { UserMenuComponent } from './theme/components/user-menu/user-menu.component';
 
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -73,6 +74,7 @@ import { UserMenuComponent } from './theme/components/user-menu/user-menu.compon
     ApplicationsComponent,
     MessagesComponent,
     UserMenuComponent,
+     
   ],
   providers: [
     AppSettings,

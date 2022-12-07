@@ -7,13 +7,19 @@ import {ProfileComponent} from "../../pages/profile/profile.component";
 import {SharedModule} from "../../shared/shared.module";
 import { HttpClientModule } from '@angular/common/http';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { TableDataComponent } from './table-data/table-data.component';
+
+ 
+
 export const routes: Routes = [
   { path: 'reactive-form', component: ReactiveFormsTestComponent, data: { breadcrumb: 'reactive-form' } },
 ];
 
 @NgModule({
   declarations: [
-    ReactiveFormsTestComponent
+    ReactiveFormsTestComponent,
+    TableDataComponent,
+    
   ],
     imports: [
       MatDatepickerModule,
