@@ -1,9 +1,112 @@
-<form [formGroup]="form">
-  <mat-form-field appearance="legacy" floatLabel="always">
-    <mat-label>name</mat-label>
-    <input matInput formControlName="name">
-    <mat-icon matPrefix>edit</mat-icon>
-  </mat-form-field>
-  <input formControlName="body">
-</form>
-<button (click)="save()">save</button>
+ <div class="center">
+
+  <form [formGroup]="form">
+
+  
+    <div class="field-container">
+    <mat-form-field  appearance="fill">
+      <mat-label>Category</mat-label>
+      <mat-select name="clientCar" formControlName="clientCar" class="form-select" placeholder="Category" 
+      [(ngModel)]="selectedCar" (selectionChange)="changeCar($event)" >
+       
+        <mat-option *ngFor="let car of carsData" [value]="car.name" >
+          {{car.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    </div>
+    
+    <div  class="field-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Select Your Car</mat-label>
+      <mat-select name="clientModel" formControlName="clientModel"
+       [(ngModel)]="model" (selectionChange)="changeModel($event)">
+        <mat-option *ngFor="let model of models" [value]="model">
+          {{model}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    </div>
+    
+    <div  class="field-container-date">
+      <mat-form-field appearance="fill">
+        <mat-label>Pickup</mat-label>
+        <mat-select formControlName="clientPickup">
+          <mat-option *ngFor="let pickup of pickups" [value]="pickup">
+            {{pickup}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    
+      <mat-form-field appearance="fill">
+        <mat-label>pickup Date</mat-label>
+        <input matInput [matDatepicker]="picker1"  
+        formControlName="pickupDate" [(ngModel)]="date">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+      <!-- [formControl]="date" -->
+    </div>
+    
+    <div  class="field-container-date">
+      <mat-form-field appearance="fill">
+        <mat-label>Drop Off</mat-label>
+        <mat-select formControlName="clientDropoff">
+          <mat-option *ngFor="let drop of dropoff" [value]="drop">
+            {{drop}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    
+      
+    <mat-form-field appearance="fill">
+      <mat-label>dropoff Date</mat-label>
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <input matInput [matDatepicker]="picker2"
+             formControlName="dropoffDate" [(ngModel)]="serializedDate">
+             <!-- [formControl]="serializedDate" -->
+      
+      <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+    
+     
+      
+    
+    </div >
+    
+     <div  class="field-container">
+      <mat-form-field class="example-full-width"  appearance="outline">
+        <mat-label >Your Name</mat-label>
+        <input class="example-full-width" matInput   maxlength="256" formControlName="clientName">
+      </mat-form-field>
+     </div>
+    
+    <div  class="field-container">
+      <mat-form-field class="example-full-width"  appearance="outline">
+        <mat-label >Email address</mat-label>
+        <input class="example-full-width" matInput  type="email" maxlength="256" formControlName="clientEmail">
+      </mat-form-field>
+    </div>
+    
+     
+    <div  class="field-container">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <span matPrefix>+90 &nbsp;</span>
+        <input type="tel" matInput placeholder="555-555-1234" formControlName="clientPhone">
+        <mat-icon matSuffix>mode_edit</mat-icon>
+      </mat-form-field>
+    </div>
+    
+    <div class="center">
+      <button class="save-btn" (click)="save()"> CONFIRM CAR BOOKING</button>
+    </div>
+    
+    
+    </form>
+ </div>
+
+
+
+ 
+ 

@@ -1,0 +1,22 @@
+.save-btn{
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 10px 30px;
+    border: white;
+    border-radius: 5px;
+    background-color: rgb(140, 127, 255);
+    padding: 15px 35px;
+}
+.field-container mat-form-field{
+    width: 40%;
+    
+}
+
+.field-container-date mat-form-field{
+    width: 20%;
+    
+}
+.center{
+    background-color: rgb(237, 248, 252);
+    text-align: center;
+}
