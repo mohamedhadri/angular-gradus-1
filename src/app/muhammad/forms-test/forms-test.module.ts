@@ -8,6 +8,7 @@ import {SharedModule} from "../../shared/shared.module";
 import { HttpClientModule } from '@angular/common/http';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { TableDataComponent } from './table-data/table-data.component';
+import { ObservableExampleComponent } from './observable-example/observable-example.component';
 
  
 
@@ -19,6 +20,7 @@ export const routes: Routes = [
   declarations: [
     ReactiveFormsTestComponent,
     TableDataComponent,
+    ObservableExampleComponent,
     
   ],
     imports: [

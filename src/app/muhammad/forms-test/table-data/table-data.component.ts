@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
  
 import { MatTableDataSource } from '@angular/material/table';
+
 import { AppSettings } from '../../../app.settings';
 import { Settings } from '../../../app.settings.model';
  import {ELEMENT_DATA} from "./myTable"
@@ -24,11 +25,12 @@ export class TableDataComponent implements OnInit {
   //   this.dataSource = new MatTableDataSource<Element>(this.tablesService.getData());
   // }
 
-
+  
 
   constructor() { }
 
   ngOnInit(): void {
+  
   }
 
   
