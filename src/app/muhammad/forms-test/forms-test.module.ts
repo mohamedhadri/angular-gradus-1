@@ -9,18 +9,23 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { TableDataComponent } from './table-data/table-data.component';
 import { ObservableExampleComponent } from './observable-example/observable-example.component';
+import { CardExampleComponent } from './card-example/card-example.component';
+ 
 
  
 
 export const routes: Routes = [
   { path: 'reactive-form', component: ReactiveFormsTestComponent, data: { breadcrumb: 'reactive-form' } },
+  { path: 'card-example', component: CardExampleComponent, data: { breadcrumb: 'card-example' } },
 ];
 
 @NgModule({
   declarations: [
+    CardExampleComponent,
     ReactiveFormsTestComponent,
     TableDataComponent,
     ObservableExampleComponent,
+    CardExampleComponent,
     
   ],
     imports: [
