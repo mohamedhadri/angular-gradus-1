@@ -1,0 +1,18 @@
+mat-card-content{
+    /* background-color: rgb(235, 249, 253); */
+}
+
+/* .custom-list-style mat-list-item{
+font-size: 1rem !important;
+ 
+box-shadow: rgba(224, 224, 236, 0.25) 0px 2px 5px -1px, rgba(95, 94, 94, 0.3) 0px 1px 3px -1px;
+} */
+
+.custom-list-style:nth-child(even){
+    background-color:#ffffff !important;
+}
+
+.custom-list-style:nth-child(odd){
+    background-color: #eae9fc !important;
+}
+

@@ -30,19 +30,19 @@ export class ObservableExampleComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.myObservable.subscribe((val)=>{
-      console.log(val)
-    })
+    // this.myObservable.subscribe((val)=>{
+    //   console.log(val)
+    // })
 
-    this.source$.pipe(
-      // Notice in here we're merging 3 subscriptions to `shared$`.
-      connect(shared$ => merge(
-        shared$.pipe(map(n => `all ${ n }`)),
-        shared$.pipe(filter(n => n % 2 === 0), map(n => `even ${ n }`)),
-        shared$.pipe(filter(n => n % 2 === 1), map(n => `odd ${ n }`))
-      ))
-    )
-    .subscribe(console.log);
+    // this.source$.pipe(
+    //   // Notice in here we're merging 3 subscriptions to `shared$`.
+    //   connect(shared$ => merge(
+    //     shared$.pipe(map(n => `all ${ n }`)),
+    //     shared$.pipe(filter(n => n % 2 === 0), map(n => `even ${ n }`)),
+    //     shared$.pipe(filter(n => n % 2 === 1), map(n => `odd ${ n }`))
+    //   ))
+    // )
+    // .subscribe(console.log);
 
 
     

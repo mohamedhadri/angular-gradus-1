@@ -1,1 +1,118 @@
 
+<div class="w-100" fxLayout="row wrap">
+    <div fxFlex="40"> 
+        <!-- <mat-card>
+            <mat-card-title>Card Pearson Data</mat-card-title>
+          
+            <mat-card-content>
+              <mat-list role="list"  *ngIf="parsedJson.schema=='Person' " class="custom-list-style">
+                <mat-list-item role="listitem" >
+                ID:    {{parsedJson.id}}    
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    country: {{parsedJson.properties.country}}
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    name:    {{parsedJson.properties.name}}
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    topics:    {{parsedJson.properties.topics}}
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    modifiedAt: {{parsedJson.properties.modifiedAt}}
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                     gender:     {{parsedJson.properties.gender}}
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                     notes:  {{parsedJson.properties.notes}}
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    alias:     {{parsedJson.properties.alias || null}}
+                </mat-list-item>
+
+
+                <mat-list-item role="listitem">
+                    wikidataId: {{parsedJson.properties.wikidataId || null}}
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    firstName: {{parsedJson.properties.firstName || null}}
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    birthDate: {{parsedJson.properties.birthDate || null}}
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    nationality: {{parsedJson.properties.nationality || null}}
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    birthPlace: {{parsedJson.properties.birthPlace || null}}
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    position: {{parsedJson.properties.position || null}}
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    first seen: {{parsedJson.first_seen || null}}
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    last seen:  {{parsedJson.last_seen || null}}
+                </mat-list-item>
+              </mat-list >
+            </mat-card-content>
+          </mat-card> -->
+
+ 
+          <mat-card>
+            <mat-card-title>Card Pearson Data</mat-card-title>
+
+            <mat-card-content>
+
+                <mat-list role="list"    class="custom-list-style" *ngFor="let item of res2 | keyvalue">
+
+
+                    <mat-list-item role="listitem" >
+                      
+                            
+                            <!-- {{item|json}}  -->
+                         
+                          {{item.key}} : {{item.value}}  
+                          
+                       
+                      
+                        
+                    </mat-list-item>
+                </mat-list>
+
+            </mat-card-content>
+
+          </mat-card>
+           
+                 
+        
+        
+          
+                           <!-- <div  *ngFor="let item of res | keyvalue"> -->
+                            
+                                <!-- {{item|json}}  -->
+                                <!-- Key:{{item.key}} and Value:{{item.value}} -->
+                              
+                           
+                           <!-- </div> -->
+                       
+                         
+                          
+                    
+                       
+                   
+
+                 
+         
+     
+
+          
+
+          
+    </div>
+    <div fxFlex="60">
+        
+    </div>
+</div>
