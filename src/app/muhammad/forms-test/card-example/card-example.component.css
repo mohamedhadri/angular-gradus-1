@@ -5,9 +5,9 @@ font-size: 1rem !important;
   
 }
 
-.custom-list-style:nth-child(even){
+/* .custom-list-style:nth-child(even){
     background-color:#ffffff !important;
-}
+} */
 
 .custom-list-style:nth-child(odd){
     background-color: #eae9fc !important;

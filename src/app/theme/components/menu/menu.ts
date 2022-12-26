@@ -64,6 +64,7 @@ export const verticalMenuItems = [
     new Menu (200, 'External Link', null, 'http://themeseason.com', 'open_in_new', '_blank', false, 0)*/
   new Menu (1000, 'forms-test', '/forms-test/reactive-form', null, 'pie_chart', null, false, 0),
    new Menu (2000, 'card-test', '/forms-test/card-example', null, 'pie_chart', null, false, 0),
+   new Menu (3000, 'youtube-search', '/forms-test/youtube-search', null, 'data_usage', null, false, 0),
 
 ]
 

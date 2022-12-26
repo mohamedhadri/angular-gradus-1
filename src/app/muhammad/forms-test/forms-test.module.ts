@@ -10,6 +10,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { TableDataComponent } from './table-data/table-data.component';
 import { ObservableExampleComponent } from './observable-example/observable-example.component';
 import { CardExampleComponent } from './card-example/card-example.component';
+import { YoutubeSearchComponent } from './youtube-search/youtube-search.component';
+import { SearchBoxComponent } from './youtube-search/search-box/search-box.component';
+import { youTubeSearchInjectables } from './youtube-search/youtube-search.injectables';
  
 
  
@@ -17,15 +20,18 @@ import { CardExampleComponent } from './card-example/card-example.component';
 export const routes: Routes = [
   { path: 'reactive-form', component: ReactiveFormsTestComponent, data: { breadcrumb: 'reactive-form' } },
   { path: 'card-example', component: CardExampleComponent, data: { breadcrumb: 'card-example' } },
+  { path: 'youtube-search', component: YoutubeSearchComponent, data: { breadcrumb: 'youtube-search' } },
 ];
 
 @NgModule({
   declarations: [
-    CardExampleComponent,
+  
     ReactiveFormsTestComponent,
     TableDataComponent,
     ObservableExampleComponent,
     CardExampleComponent,
+    YoutubeSearchComponent,
+    SearchBoxComponent,
     
   ],
     imports: [
@@ -36,6 +42,7 @@ export const routes: Routes = [
         ReactiveFormsModule,
       RouterModule.forChild(routes),
       SharedModule
-    ]
+    ],
+    providers:[youTubeSearchInjectables]
 })
 export class FormsTestModule { }

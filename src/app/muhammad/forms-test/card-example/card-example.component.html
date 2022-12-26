@@ -66,12 +66,12 @@
 
             <mat-card-content>
 
-                <mat-list role="list"    class="custom-list-style" *ngFor="let item of flatObj | keyvalue">
+                <mat-list role="list"    >
 
 
-                    <mat-list-item role="listitem" >
-                      
-                            
+                    <mat-list-item  class="custom-list-style" role="listitem" *ngFor="let item of flatObj | keyvalue; " >
+                        <!-- {{i}}  {{isOdd}} -->
+                            <!-- index as i; odd as isOdd;  -->
                             <!-- {{item|json}}  -->
                          
                           {{item.key}} : {{item.value}}  
