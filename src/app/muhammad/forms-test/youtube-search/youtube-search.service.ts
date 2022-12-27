@@ -12,8 +12,8 @@ import { map } from "rxjs/operators";
 
 
 
-export const YOUTUBE_API_KEY: string = "AIzaSyBZioOI2LEHZ_xlzu2VTRXlhDlBbV4HJzU";
-export const YOUTUBE_API_URL: string = "https://www.googleapis.com/youtube/v3/search";
+//  const YOUTUBE_API_KEY: string = "AIzaSyBZioOI2LEHZ_xlzu2VTRXlhDlBbV4HJzU";
+// export const YOUTUBE_API_URL: string = "https://www.googleapis.com/youtube/v3/search";
 
 
 
@@ -21,10 +21,11 @@ export const YOUTUBE_API_URL: string = "https://www.googleapis.com/youtube/v3/se
   providedIn: 'root'
 })
 export class YoutubeSearchService {
+
   constructor(
     private http: HttpClient,
-      private YOUTUBE_API_KEY: string,
-     private YOUTUBE_API_URL: string
+      private   YOUTUBE_API_KEY: string = "AIzaSyBZioOI2LEHZ_xlzu2VTRXlhDlBbV4HJzU",
+     private YOUTUBE_API_URL: string = "https://www.googleapis.com/youtube/v3/search",
   ) { }
  
 

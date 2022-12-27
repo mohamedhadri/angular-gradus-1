@@ -12,15 +12,20 @@ import { ObservableExampleComponent } from './observable-example/observable-exam
 import { CardExampleComponent } from './card-example/card-example.component';
 import { YoutubeSearchComponent } from './youtube-search/youtube-search.component';
 import { SearchBoxComponent } from './youtube-search/search-box/search-box.component';
-import { youTubeSearchInjectables } from './youtube-search/youtube-search.injectables';
- 
 
+import { TagsSelectComponent } from './tags-select/tags-select.component';
+
+ 
+import { OverlayModule } from '@angular/cdk/overlay';
+import { OverlayDropdownComponent } from './tags-select/overlay-dropdown/overlay-dropdown.component';
+import { YoutubeSearchService,  } from './youtube-search/youtube-search.service';
  
 
 export const routes: Routes = [
   { path: 'reactive-form', component: ReactiveFormsTestComponent, data: { breadcrumb: 'reactive-form' } },
   { path: 'card-example', component: CardExampleComponent, data: { breadcrumb: 'card-example' } },
   { path: 'youtube-search', component: YoutubeSearchComponent, data: { breadcrumb: 'youtube-search' } },
+  { path: 'tags-select', component: TagsSelectComponent, data: { breadcrumb: 'tags-select' } },
 ];
 
 @NgModule({
@@ -32,6 +37,9 @@ export const routes: Routes = [
     CardExampleComponent,
     YoutubeSearchComponent,
     SearchBoxComponent,
+    TagsSelectComponent,
+    OverlayDropdownComponent,
+
     
   ],
     imports: [
@@ -40,9 +48,14 @@ export const routes: Routes = [
       HttpClientModule,
         CommonModule,
         ReactiveFormsModule,
+        OverlayModule,
       RouterModule.forChild(routes),
       SharedModule
     ],
-    providers:[youTubeSearchInjectables]
+    providers:[
+     
+      YoutubeSearchService
+    
+    ]
 })
 export class FormsTestModule { }

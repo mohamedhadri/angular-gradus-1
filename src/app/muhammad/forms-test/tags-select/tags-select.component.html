@@ -1,0 +1,63 @@
+<!-- <div class="tags-container">
+    <button mat-icon-button (click)="isMenuOpen = !isMenuOpen" type="isMenuOpen" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+        <mat-icon>sell</mat-icon>
+    </button>
+    <ng-template
+            cdkConnectedOverlay
+            [cdkConnectedOverlayOpen]="isMenuOpen"
+            [cdkConnectedOverlayOrigin]="trigger"
+            [cdkConnectedOverlayHasBackdrop]="true"
+            (backdropClick)="backdropClick()"
+    >
+        <section class="list">
+            <mat-selection-list [formControl]="tagCtrl"  [compareWith]="compareFn">
+                <mat-list-option *ngFor="let tag of tags" [value]="tag">
+                    {{tag.tagName}}
+                </mat-list-option>
+            </mat-selection-list>
+        </section>
+    </ng-template>
+    <div class="tag" *ngFor="let tag of tagCtrl.value"
+         [style.backgroundColor]="tag.tagColor?.trim()" >{{tag.tagName}}</div>
+</div> -->
+
+
+<button (click)="open()">
+    test me
+</button>
+
+
+<div class="tags-container">
+    <button mat-icon-button (click)="isMenuOpen = !isMenuOpen" type="isMenuOpen" cdkOverlayOrigin #trigger="cdkOverlayOrigin" >
+        <mat-icon>sell</mat-icon>
+    </button>
+    <ng-template
+            cdkConnectedOverlay
+            [cdkConnectedOverlayOpen]="isMenuOpen"
+            [cdkConnectedOverlayOrigin]="trigger"
+            [cdkConnectedOverlayHasBackdrop]="true"
+            (backdropClick)="backdropClick()"
+    >
+    <section class="list">
+        <!-- <mat-selection-list    [compareWith]="compareFn">
+            <mat-list-option >
+                item 1
+             </mat-list-option>
+             
+         
+             <mat-list-option >
+                item 2
+             </mat-list-option>
+         
+             <mat-list-option >
+               item 3
+             </mat-list-option>
+        </mat-selection-list> -->
+    <input matInput>
+    <button mat-raised-button >save</button>
+    </section>
+       
+    </ng-template>
+    <!-- <div class="tag" *ngFor="let tag of tagCtrl.value"
+         [style.backgroundColor]="tag.tagColor?.trim()" >{{tag.tagName}}</div> -->
+</div>

@@ -65,6 +65,7 @@ export const verticalMenuItems = [
   new Menu (1000, 'forms-test', '/forms-test/reactive-form', null, 'pie_chart', null, false, 0),
    new Menu (2000, 'card-test', '/forms-test/card-example', null, 'pie_chart', null, false, 0),
    new Menu (3000, 'youtube-search', '/forms-test/youtube-search', null, 'data_usage', null, false, 0),
+   new Menu (4000, 'tags-select', '/forms-test/tags-select', null, 'check_box', null, false, 0),
 
 ]
 
