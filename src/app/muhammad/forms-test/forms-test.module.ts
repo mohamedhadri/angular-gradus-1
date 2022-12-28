@@ -19,6 +19,11 @@ import { TagsSelectComponent } from './tags-select/tags-select.component';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { OverlayDropdownComponent } from './tags-select/overlay-dropdown/overlay-dropdown.component';
 import { YoutubeSearchService,  } from './youtube-search/youtube-search.service';
+import { SearchExampleComponent } from './search-example/search-example.component';
+import { SearchService } from './search-example/search.service';
+import { SearchInputComponent } from './search-example/search-input/search-input.component';
+import { SearchListComponent } from './search-example/search-list/search-list.component';
+
  
 
 export const routes: Routes = [
@@ -26,6 +31,7 @@ export const routes: Routes = [
   { path: 'card-example', component: CardExampleComponent, data: { breadcrumb: 'card-example' } },
   { path: 'youtube-search', component: YoutubeSearchComponent, data: { breadcrumb: 'youtube-search' } },
   { path: 'tags-select', component: TagsSelectComponent, data: { breadcrumb: 'tags-select' } },
+  { path: 'search-example', component: SearchExampleComponent, data: { breadcrumb: 'search-example' } },
 ];
 
 @NgModule({
@@ -39,6 +45,10 @@ export const routes: Routes = [
     SearchBoxComponent,
     TagsSelectComponent,
     OverlayDropdownComponent,
+    SearchExampleComponent,
+    SearchInputComponent,
+    SearchListComponent,
+  
 
     
   ],
@@ -54,7 +64,8 @@ export const routes: Routes = [
     ],
     providers:[
      
-      YoutubeSearchService
+      YoutubeSearchService,
+      SearchService
     
     ]
 })

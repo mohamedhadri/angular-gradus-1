@@ -29,59 +29,49 @@ export class SearchBoxComponent implements OnInit {
               private el: ElementRef) {
   }
 
-  // ngOnInit(): void {
-  //   // convert the `keyup` event into an observable stream
-  //     fromEvent(this.el.nativeElement, 'click')
-  //   .pipe (
-  //       map((e:any) => {
-  //         console.log('first map :', e.target.textContent);
-  //         return e.target.textContent;
-  //       }), // extract the value of the input
-
-  //       filter((text:string) => text && text.length > 1), //filter out if empty
-
-  //       debounceTime(250), //only search after 250 ms
-
-  //       tap(() => this.loading.emit(true)), // Enable loading
-  //       // search, call the search service
-
-  //       map((query:string) => {
-  //         this.youtube.search(query)
-  //         console.log('Last map');
-  //         return of(query) 
-  //         }
-  //         ), // this.youtube.search(query)) ,
-  //       // discard old events if new input comes in
-  //         switchAll()
-  //       ); 
-
-        
-  // }
-
-  
   ngOnInit(): void {
     // convert the `keyup` event into an observable stream
-    Observable.fromEvent(this.el.nativeElement, 'keyup')
-      .map((e: any) => e.target.value) // extract the value of the input
-      .filter((text: string) => text.length > 1) // filter out if empty
-      .debounceTime(250)                         // only once every 250ms
-      .do(() => this.loading.emit(true))         // enable loading
-      // search, discarding old events if new input comes in
-      .map((query: string) => this.youtube.search(query))
-      .switch()
-      // act on the return of the search
-      .subscribe(
-        (results: SearchResult[]) => { // on sucesss
-          this.loading.emit(false);
-          this.results.emit(results);
-        },
-        (err: any) => { // on error
-          console.log(err);
-          this.loading.emit(false);
-        },
-        () => { // on completion
-          this.loading.emit(false);
-        }
-      );
+    const obs=  fromEvent(this.el.nativeElement, 'click')
+    .pipe (
+        map((e:any) => {
+          console.log('first map :', e.target.textContent);
+          return e.target.textContent;
+        }), // extract the value of the input
+
+        filter((text:string) => text && text.length > 1), //filter out if empty
+
+        debounceTime(250), //only search after 250 ms
+
+        tap(() => this.loading.emit(true)), // Enable loading
+        // search, call the search service
+
+        map((query:string) => {
+          this.youtube.search(query)
+          console.log('Last map');
+          return of(query) 
+          }
+          ), // this.youtube.search(query)) ,
+        // discard old events if new input comes in
+          switchAll()
+        ); 
+
+
+        // obs.subscribe(
+        //   (results: SearchResult[]) => { // on sucesss
+        //     this.loading.emit(false);
+        //     this.results.emit(results);
+        //   },
+        //   (err: any) => { // on error
+        //     console.log(err);
+        //     this.loading.emit(false);
+        //   },
+        //   () => { // on completion
+        //     this.loading.emit(false);
+        //   }
+        // );
+        
   }
+
+  
+  
 }
