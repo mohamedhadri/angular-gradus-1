@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormGroup, UntypedFormBuilder, Validators} from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
 import { debounceTime } from 'rxjs/operators';
 import { Menu } from '../../theme/components/menu/menu.model';
 import { MenuService } from '../../theme/components/menu/menu.service';

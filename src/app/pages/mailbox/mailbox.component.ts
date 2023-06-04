@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 import { UntypedFormGroup, UntypedFormBuilder, Validators} from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
 import { AppSettings } from '../../app.settings';
 import { Settings } from '../../app.settings.model';
 import { Mail } from './mail.model';

@@ -3,7 +3,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { AppSettings } from '../../../../app.settings';
 import { Settings } from '../../../../app.settings.model';
 import { MenuService } from '../menu.service';
-import { MatMenuTrigger } from '@angular/material/menu';
+import { MatLegacyMenuTrigger as MatMenuTrigger } from '@angular/material/legacy-menu';
 
 @Component({
   selector: 'app-horizontal-menu',

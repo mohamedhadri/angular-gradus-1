@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatChipInputEvent } from '@angular/material/chips';
+import { MatLegacyChipInputEvent as MatChipInputEvent } from '@angular/material/legacy-chips';
 import { ENTER } from '@angular/cdk/keycodes';
 import { AppSettings } from '../../../app.settings';
 import { Settings } from '../../../app.settings.model';

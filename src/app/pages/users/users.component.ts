@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 import { AppSettings } from '../../app.settings';
 import { Settings } from '../../app.settings.model';
 import { User, UserProfile, UserWork, UserContacts, UserSocial, UserSettings } from './user.model';
